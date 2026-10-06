@@ -10,7 +10,7 @@ Departamento de Computação · Prof.ª Dr.ª Emanuele Marques Rodrigues Santos
 
 > **Matrícula:** 553875
 
-**Página com os gráficos interativos:** https://larivit.github.io/visdados-vega-lite/
+**Página com os gráficos interativos:** https://larisvitoria.github.io/visdados-vega-lite/
 
 ## Conteúdo
 
