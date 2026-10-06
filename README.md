@@ -1,8 +1,9 @@
-<img alt="Logo da Universidade Federal do Ceará" src="assets/logo.png" width="180">
+<img alt="Logo da Universidade Federal do Ceará" src="assets/logo.png" width="220">
 
 # **Atividade Vega-Lite Api**
 
 **Graduação — Visualização de Dados (CK0266) · 2026.2**
+
 Departamento de Computação · Prof.ª Dr.ª Emanuele Marques Rodrigues Santos
 
 > **Nome completo:** Larissa Vitória Santos Menezes
