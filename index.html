@@ -24,7 +24,7 @@
   /* Capa */
   .hero { background:var(--navy); border-bottom:6px solid var(--cyan); color:#fff; padding:56px 24px 52px; }
   .hero-in { max-width:960px; margin:0 auto; display:flex; gap:40px; align-items:center; }
-  .logo { flex:none; width:210px; background:#fff; border-radius:18px; padding:14px; box-shadow:0 14px 34px -14px rgba(0,0,0,.5); }
+  .logo { flex:none; width:280px; background:#fff; border-radius:18px; padding:20px 22px; box-shadow:0 14px 34px -14px rgba(0,0,0,.5); }
   .logo img { display:block; width:100%; height:auto; }
   .hero h1 { font-size:clamp(2rem, 5.5vw, 3.2rem); letter-spacing:-.01em; }
   .hero .course { color:#9fe3ee; font-family:var(--serif); font-size:1.15rem; margin:10px 0 0; }
@@ -66,7 +66,7 @@
   @media (max-width:760px) {
     .hero { padding:40px 20px; }
     .hero-in { flex-direction:column; align-items:flex-start; gap:24px; }
-    .logo { width:160px; }
+    .logo { width:220px; }
     main { padding:8px 16px; }
     section { margin-top:48px; }
     .lead { margin-left:0; }
@@ -80,7 +80,7 @@
 
 <header class="hero">
   <div class="hero-in">
-    <div class="logo"><img src="assets/logo-placeholder.svg" alt="Logo da Universidade Federal do Ceará"></div>
+    <div class="logo"><img src="assets/logo-ufc-azul.svg" alt="Logo da UFC"></div>
     <div>
       <h1>Atividade Vega-Lite</h1>
       <p class="course">Graduação — Visualização de Dados (CK0266) · 2026.2</p>
@@ -100,7 +100,6 @@
     <p class="lead">Dataset: estilo de vida e saúde</p>
     <div class="card">
       <p>A tabela abaixo cria e mostra o dataset, que consiste em um conjunto de dados sobre o <strong>estilo de vida e saúde de 20.000 indivíduos</strong>.</p>
-      <p>Os dados podem ser acessados através da variável <code>life_style_data</code>.</p>
     </div>
   </section>
 
@@ -113,10 +112,9 @@
     </div>
     <div class="items">
       <article class="item"><span class="l">a</span><div><h3>O que mostra</h3><p>A média de calorias queimadas (<code>Calories_Burned</code>) para cada tipo de treino (<code>Workout_Type</code>), permitindo comparar qual modalidade, em média, gasta mais energia.</p></div></article>
-      <article class="item"><span class="l">b</span><div><h3>Agregação</h3><p>Com 20.000 indivíduos, um valor por pessoa não faria sentido em barras. Usei <code>aggregate("mean")</code> no eixo Y para resumir cada categoria em um único valor, simples de ler e comparável entre grupos.</p></div></article>
-      <article class="item"><span class="l">c</span><div><h3>Ordenação</h3><p>As barras seguem a ordem crescente da própria média (<code>sort</code> por <code>Calories_Burned</code>, <code>op: "mean"</code>), e não a alfabética. O ranking fica evidente de relance, com a barra mais alta no extremo direito.</p></div></article>
-      <article class="item"><span class="l">d</span><div><h3>Codificações</h3><p>Posição vertical para o valor (barras começam em zero, sem exagerar diferenças) e horizontal para a categoria. A cor reforça a distinção entre tipos; como repete o eixo X, removi a legenda (<code>legend(null)</code>).</p></div></article>
-      <article class="item wide"><span class="l">e</span><div><h3>Detalhes</h3><p>Títulos dos eixos em português e tamanho fixo de 500 × 300 px para boa leitura dos rótulos.</p></div></article>
+      <article class="item"><span class="l">b</span><div><h3>Agregação</h3><p>Com 20.000 indivíduos, um valor por pessoa não faria sentido em barras. Logo, usei <code>aggregate("mean")</code> no eixo Y para resumir cada categoria em um único valor, tornando simples de ler e comparável entre grupos.</p></div></article>
+      <article class="item"><span class="l">c</span><div><h3>Ordenação</h3><p>As barras seguem a ordem crescente da própria média (<code>sort</code> por <code>Calories_Burned</code>, <code>op: "mean"</code>), e não a alfabética. Dessa forma, o ranking fica evidente, com a barra mais alta no extremo direito.</p></div></article>
+      <article class="item"><span class="l">d</span><div><h3>Codificações</h3><p>Posição vertical para o valor (barras começam em zero, sem exagerar diferenças) e horizontal para a categoria. A cor reforça a distinção entre tipos, logo, para evitar redundância, removi a legenda (<code>legend(null)</code>).</p></div></article>
     </div>
   </section>
 
@@ -128,11 +126,11 @@
       <div class="chart-body"><iframe height="431" title="Gráfico de dispersão" src="https://observablehq.com/embed/b055f3594fdd86d4@196?cells=scatterplot"></iframe></div>
     </div>
     <div class="items">
-      <article class="item"><span class="l">a</span><div><h3>O que mostra</h3><p>A relação entre idade (<code>Age</code>) e calorias queimadas (<code>Calories_Burned</code>) de cada indivíduo, separada por gênero (<code>Gender</code>). Cada ponto é uma pessoa.</p></div></article>
-      <article class="item"><span class="l">b</span><div><h3>Tipo de gráfico</h3><p>As duas variáveis principais são quantitativas e o objetivo é observar se há relação entre elas, então a dispersão é a escolha natural: idade no eixo X e calorias no eixo Y.</p></div></article>
-      <article class="item"><span class="l">c</span><div><h3>Sobreposição de pontos</h3><p>Com 20.000 registros, muitos pontos se sobrepõem. Usei círculos moderados (<code>size: 60</code>) e <code>opacity: 0.7</code>: regiões densas ficam mais escuras e a concentração dos dados continua visível.</p></div></article>
-      <article class="item"><span class="l">d</span><div><h3>Escala</h3><p>No eixo da idade usei <code>scale({ zero: false })</code>, pois a faixa etária não começa em zero e forçar a origem comprimiria os pontos.</p></div></article>
-      <article class="item wide"><span class="l">e</span><div><h3>Comparação entre gêneros</h3><p>Com <code>column</code>, criei um painel por gênero (small multiples) com os mesmos eixos, facilitando comparar as distribuições lado a lado sem que um grupo cubra o outro. A cor reforça o gênero e, como os títulos das colunas já identificam cada grupo, removi a legenda.</p></div></article>
+      <article class="item"><span class="l">a</span><div><h3>O que mostra</h3><p>A relação entre idade (<code>Age</code>) e calorias queimadas (<code>Calories_Burned</code>) de cada indivíduo, separada por gênero (<code>Gender</code>). Cada ponto representa uma pessoa.</p></div></article>
+      <article class="item"><span class="l">b</span><div><h3>Tipo de gráfico</h3><p>As duas variáveis principais são quantitativas e o objetivo é observar se há relação entre elas, logo a dispersão é a escolha mais lógica, com idade no eixo X e calorias no eixo Y.</p></div></article>
+      <article class="item"><span class="l">c</span><div><h3>Sobreposição de pontos</h3><p>Com 20.000 registros, muitos pontos se sobrepõem. Utilizei círculos de tamanho médio (<code>size: 60</code>) e <code>opacity: 0.7</code>, as regiões densas ficam mais escuras e a concentração dos dados continua visível.</p></div></article>
+      <article class="item"><span class="l">d</span><div><h3>Escala</h3><p>No eixo da idade usei <code>scale({ zero: false })</code>, pois a faixa etária não começa em zero e forçar a origem comprimiria os pontos, dificultando a interpretação.</p></div></article>
+      <article class="item wide"><span class="l">e</span><div><h3>Comparação entre gêneros</h3><p>Com <code>column</code>, criei um painel por gênero (small multiples) com os mesmos eixos, facilitando comparar as distribuições lado a lado sem que um grupo cubra o outro. A cor reforça a diferença de gênero e, como os títulos das colunas já identificam cada grupo, removi a legenda para evitar redundância.</p></div></article>
     </div>
   </section>
 

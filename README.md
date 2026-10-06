@@ -1,4 +1,4 @@
-<img alt="Logo da Universidade Federal do Ceará" src="assets/logo.png" width="220">
+<img alt="Logo da Universidade Federal do Ceará" src="assets/logo-ufc.svg" width="220">
 
 # **Atividade Vega-Lite Api**
 
