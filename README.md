@@ -1,27 +1,19 @@
-![Logo da Universidade Federal do Ceará](assets/logo_ufc.png)
+<img alt="Logo da Universidade Federal do Ceará" src="assets/logo.png" width="180">
 
-Departamento de Computação — Prof.ª Dr.ª Emanuele Marques Rodrigues Santos
+# **Atividade Vega-Lite Api**
+
+**Graduação — Visualização de Dados (CK0266) · 2026.2**
+Departamento de Computação · Prof.ª Dr.ª Emanuele Marques Rodrigues Santos
 
 > **Nome completo:** Larissa Vitória Santos Menezes
->
 > **Matrícula:** 553875
 
-## Vega-Lite API — Exercícios
+**Página com os gráficos interativos:** https://larivit.github.io/visdados-vega-lite/
 
-> A tabela abaixo cria e mostra o dataset, que consiste em um conjunto de dados sobre o **estilo de vida e saúde de 20.000 indivíduos**.
->
-> Os dados podem ser acessados através da variável `life_style_data`.
+## Conteúdo
 
-## Gráfico de barras
-
-[Abrir o gráfico de barras](https://observablehq.com/embed/b055f3594fdd86d4@196?cells=bar_chart)
-
-## Gráfico de dispersão
-
-[Abrir o gráfico de dispersão](https://observablehq.com/embed/b055f3594fdd86d4@196?cells=scatterplot)
-
----
+- **Dataset:** estilo de vida e saúde de 20.000 indivíduos (`life_style_data`).
+- **Gráfico de barras:** média de calorias queimadas por tipo de treino.
+- **Gráfico de dispersão:** idade × calorias queimadas, com um painel por gênero.
 
 Notebook completo no Observable: [observablehq.com/d/b055f3594fdd86d4](https://observablehq.com/d/b055f3594fdd86d4)
-
-Nome: Larissa Vitória Santos Menezes | Matrícula: 553875 — Atividade Vega-Lite
