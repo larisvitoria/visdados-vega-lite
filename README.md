@@ -7,6 +7,7 @@
 Departamento de Computação · Prof.ª Dr.ª Emanuele Marques Rodrigues Santos
 
 > **Nome completo:** Larissa Vitória Santos Menezes
+
 > **Matrícula:** 553875
 
 **Página com os gráficos interativos:** https://larivit.github.io/visdados-vega-lite/
